@@ -23,8 +23,8 @@ const Avatar = styled.img`
 import React from 'react'
 
 function UserAvatar() {
-  const {user}=useUser()
-  const {fullName,avatar}=user.user_metadata  
+  const {user}=useUser() || {}
+  const {fullName,avatar}=user?.user_metadata || {}  
   return (
     <StyledUserAvatar>
           <Avatar src={avatar || useravtar} alt={`Avatar of ${fullName}`}/>
