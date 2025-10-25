@@ -47,7 +47,6 @@ function SignupForm() {
             },
           })}
           disabled={isLoading}
-
         />
       </FormRow>
 
@@ -66,7 +65,6 @@ function SignupForm() {
             },
           })}
           disabled={isLoading}
-
         />
       </FormRow>
 
@@ -80,7 +78,6 @@ function SignupForm() {
               value === getValues("password") || "Passwords do not match",
           })}
           disabled={isLoading}
-
         />
       </FormRow>
 
@@ -89,8 +86,10 @@ function SignupForm() {
         <Button variation="secondary" type="reset">
           Cancel
         </Button>
-          
-        <Button disabled={isLoading} >{isLoading ? <SpinnerMini /> : "Create new user"}</Button>
+
+        <Button disabled={isLoading}>
+          {isLoading ? <SpinnerMini /> : "Create new user"}
+        </Button>
       </FormRow>
     </Form>
   );
